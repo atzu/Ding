@@ -63,7 +63,7 @@ console.log("Current: "+curconns);
 
 
 // Fire the alarm if one<two<three
-//if (retrievedMaxObject.minus2t < retrievedMaxObject.minust && retrievedMaxObject.minust < retrievedMaxObject.now && retrievedMaxObject.now <= curconns){
+if (retrievedMaxObject.minus2t < retrievedMaxObject.minust && retrievedMaxObject.minust < retrievedMaxObject.now && retrievedMaxObject.now <= curconns){
 	 
 	 var myAudio = new Audio();
 	 myAudio.src = chrome.extension.getURL("ding.m4a");
@@ -75,7 +75,7 @@ console.log("Current: "+curconns);
   	});
 
 
-//}
+}
 
 // Put the object into storage
 localStorage.setItem('pastConns', JSON.stringify(retrievedObject));
