@@ -1,0 +1,25 @@
+{
+  "name": "Avatar Alarm",
+  "description": "Avatar Alarm Dings on Trouble",
+  "version": "0.1",
+  "permissions": [
+    "activeTab",
+    "notifications"
+  ],
+  "content_scripts": [
+  {
+      "matches": ["http://*/status?re=*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+  }
+  ],
+  "browser_action": {
+    "default_title": "Check busy connections",
+    "default_icon": "icon.png"
+  },
+  "web_accessible_resources": ["ding.m4a", "alert.png"],
+  "icons": { "16": "icon_16.png",
+           "48": "icon_48.png",
+          "128": "icon_128.png" },
+  "manifest_version": 2
+}
